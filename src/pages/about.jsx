@@ -18,7 +18,7 @@ export default function About () {
           content='Soy Edu Calvo, vivo en Madrid en donde diseño y creo webs.'
         />
       </Head>
-      <Container className='mt-16 sm:mt-32'>
+      <Container className='mt-16 sm:mt-24'>
         <div className='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12'>
           <motion.div
             className='lg:pl-20'
@@ -34,17 +34,15 @@ export default function About () {
               variants={FADE_DOWN_ANIMATION_VARIANTS}
             >
               <Balancer>
-                {' '}
-                Soy Edu Calvo, vivo en Madrid en donde diseño y creo webs.
+                Soy Cristian, diseño y creo webs.
               </Balancer>
             </motion.h1>
             <motion.div
-              className='mt-6 text-base space-y-7 text-zinc-600 dark:text-zinc-400'
+              className='text-base space-y-1 text-zinc-600 dark:text-zinc-400'
               variants={FADE_DOWN_ANIMATION_VARIANTS}
             >
               <p>
-                Soy diseñador web y frontend desde mi primer año de estudios de
-                diseño gráfico en la universidad ESNE.
+                Soy diseñador web y frontend
               </p>
               <p>
                 Me encanta lo que hago porque me permite utilizar mi creatividad

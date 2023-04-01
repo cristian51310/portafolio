@@ -140,7 +140,6 @@ export default function Uses () {
               'relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2'
             )}
           >
-            <span className='sr-only'>Use setting</span>
             <span
               className={classNames(
                 enabled ? 'translate-x-5' : 'translate-x-0',
@@ -178,7 +177,6 @@ export default function Uses () {
                     : 'opacity-0 duration-100 ease-out',
                   'absolute inset-0 flex h-full w-full items-center justify-center transition-opacity'
                 )}
-                aria-hidden='true'
               >
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
@@ -200,7 +198,7 @@ export default function Uses () {
         </motion.div>
         {view === 'list'
           ? (
-            <div className='space-y-20'>
+            <div className='space-y-20 mb-16'>
               <ToolsSection title='Workstation'>
                 {workstation.map((stack) => (
                   <Toollist
@@ -240,7 +238,7 @@ export default function Uses () {
             </div>
             )
           : (
-            <div className='space-y-20'>
+            <div className='space-y-20 mb-16'>
               <ToolsSectionGrid title='Workstation'>
                 {workstation.map((stack) => (
                   <Toolgrid

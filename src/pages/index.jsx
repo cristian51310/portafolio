@@ -23,7 +23,6 @@ function Article ({ article }) {
         <br />
         {article.tags.map((tag) => (
           <a
-            href='#'
             key={tag}
             className="inline-block text-zinc-600 before:content-['#'] dark:text-zinc-400"
           >
@@ -77,7 +76,7 @@ export default function Home ({ articles }) {
               <Article key={article.slug} article={article} />
             ))}
           </div>
-          <div className='space-y-10 lg:pl-16 xl:pl-24'>
+          <div className='lg:pl-16 xl:pl-24'>
             <Resume />
           </div>
         </motion.div>

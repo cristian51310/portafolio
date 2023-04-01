@@ -24,7 +24,7 @@ function NavLink ({ href, children, target, rel, onMouseEnter, onMouseLeave }) {
 export function Footer () {
   const [hoveredIndex, setHoveredIndex] = useState(null)
   return (
-    <motion.footer className='mt-32' {...FADE_IN_ANIMATION_CARD}>
+    <motion.footer {...FADE_IN_ANIMATION_CARD}>
       <Container.Outer>
         <div className='pt-10 pb-16 border-t border-zinc-900/10 dark:border-white/10'>
           <Container.Inner>

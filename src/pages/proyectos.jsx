@@ -159,7 +159,6 @@ export default function Projects ({ pinnedRepos }) {
                   href={project.link.href}
                   variant='solid'
                   target='_blank'
-                  rel='noopener noreferrer'
                 >
                   <Link2 className='w-4 h-4 transition stroke-zinc-600 dark:stroke-zinc-400 group-active:stroke-zinc-900 group-hover:stroke-zinc-900 dark:group-hover:stroke-zinc-100 dark:group-active:stroke-zinc-50' />
                   <span className='ml-2'>{project.link.label}</span>
@@ -168,7 +167,10 @@ export default function Projects ({ pinnedRepos }) {
             </Card>
           ))}
         </ul>
-        <Clients />
+        <div className='mb-10'>
+          <Clients />
+        </div>
+
       </SimpleLayout>
     </>
   )
