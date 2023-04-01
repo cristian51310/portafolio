@@ -25,7 +25,7 @@ export const generalLinks = [
 
 export const linksSocial = [
   {
-    href: 'https://twitter.com/educlopez93',
+    href: 'https://www.facebook.com/cristian.ruben.9465',
     icon: FaFacebookSquare,
     label: 'Seguir en Facebook',
     hover: 'hover:text-blue-600',
@@ -33,7 +33,7 @@ export const linksSocial = [
     hover_group: 'group-hover:text-blue-600'
   },
   {
-    href: 'https://twitter.com/educlopez93',
+    href: 'https://twitter.com/CristianRubnFi1',
     icon: FaTwitterSquare,
     label: 'Seguir en Twitter',
     hover: 'hover:text-sky-500',
@@ -41,7 +41,7 @@ export const linksSocial = [
     hover_group: 'group-hover:text-sky-500'
   },
   {
-    href: 'https://instagram.com/edui_design/',
+    href: 'https://instagram.com/rubenfigue513/',
     icon: FaInstagramSquare,
     label: 'Seguir en Instagram',
     hover: 'hover:text-pink-600',
@@ -49,7 +49,7 @@ export const linksSocial = [
     hover_group: 'group-hover:text-pink-600'
   },
   {
-    href: 'https://github.com/educlopez',
+    href: 'https://github.com/cristian51310/portafolio',
     icon: FaGithub,
     label: 'Seguir en GitHub',
     hover: 'hover:text-gray-900',
@@ -57,7 +57,7 @@ export const linksSocial = [
     hover_group: 'group-hover:text-white'
   },
   {
-    href: 'https://linkedin.com/in/educlopez',
+    href: 'https://linkedin.com/',
     icon: FaLinkedin,
     label: 'Seguir en LinkedIn',
     hover: 'hover:text-blue-500',
@@ -65,7 +65,7 @@ export const linksSocial = [
     hover_group: 'group-hover:text-blue-500'
   },
   {
-    href: 'https://read.cv/educlopez',
+    href: 'https://mastodon.social/explore',
     icon: FaMastodon,
     label: 'Seguir en Mastodont',
     hover: 'hover:text-purple-500',
