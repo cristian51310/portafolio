@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 
-import CommandMenu from '@/components/CommandBar'
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 import '@/styles/tailwind.css'
@@ -27,7 +26,6 @@ export default function App ({ Component, pageProps, router }) {
         <div className='relative'>
           <Header />
           <main>
-            <CommandMenu />
             <motion.div
               initial='hidden'
               whileInView='show'

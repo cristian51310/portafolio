@@ -8,7 +8,7 @@ import { useTheme } from 'next-themes'
 
 import { FADE_IN_ANIMATION_CARD } from '@/lib/constants'
 
-export default function Clients() {
+export default function Clients () {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
   // useEffect only runs on the client, so now we can safely show the UI
@@ -21,7 +21,7 @@ export default function Clients() {
   }
   const styles = {
     ...DEFAULT_SIZE,
-    ...clients.style,
+    ...clients.style
   }
   let numericWidth
   let numericHeight
@@ -33,21 +33,21 @@ export default function Clients() {
   }
   return (
     <motion.div {...FADE_IN_ANIMATION_CARD}>
-      <div className="grid items-center w-full max-w-screen-lg min-w-full grid-cols-2 gap-5 mt-20 sm:grid-cols-4 sm:px-0">
+      <div className='grid items-center w-full max-w-screen-lg min-w-full grid-cols-2 gap-5 mt-20 sm:grid-cols-4 sm:px-0'>
         {clients.map((client) => (
           <Link
-            target="_blank"
-            rel="noopener noreferer"
-            className="relative group"
+            target='_blank'
+            rel='noopener noreferer noreferrer'
+            className='relative group'
             key={client.name}
             href={client.url}
           >
-            <div className="absolute z-10 flex items-center justify-center w-full h-full transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-              <p className="font-semibold text-zinc-700 dark:text-white">
+            <div className='absolute z-10 flex items-center justify-center w-full h-full transition-all translate-y-5 opacity-0 group-hover:translate-y-0 group-hover:opacity-100'>
+              <p className='font-semibold text-zinc-700 dark:text-white'>
                 {client.urlname}
               </p>
-              <div className="relative flex items-center group">
-                <ArrowUpRight className="absolute w-4 h-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100" />
+              <div className='relative flex items-center group'>
+                <ArrowUpRight className='absolute w-4 h-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100' />
               </div>
             </div>
             <Image
@@ -56,7 +56,7 @@ export default function Clients() {
               width={numericWidth}
               height={numericHeight}
               style={styles}
-              className="h-5 col-span-1 m-auto transition-all group-hover:opacity-20 group-hover:blur-sm sm:h-7 blur-0 grayscale-0"
+              className='h-5 col-span-1 m-auto transition-all group-hover:opacity-20 group-hover:blur-sm sm:h-7 blur-0 grayscale-0'
             />
           </Link>
         ))}

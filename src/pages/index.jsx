@@ -54,15 +54,14 @@ export default function Home ({ articles }) {
           className='max-w-xl'
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <h1 className='sr-only'>Edu Calvo</h1>
+          <h1 className='sr-only'>Cristian Ruben</h1>
 
           <Balancer className='text-base text-zinc-600 dark:text-zinc-400'>
-            <span className='text-2xl font-bold  text-zinc-700 dark:text-white'>
+            <span className='text-3xl font-bold  text-zinc-700 dark:text-white'>
               Cristian Ruben
             </span>
-            <br />Soy diseñador web, frontend y movil.
-            <br />
-            Trabajo actualmente como Freelance.
+            <p>Soy diseñador web, frontend y movil.</p>
+            <p>Trabajo actualmente como Freelance.</p>
           </Balancer>
           <StatusWork isAvailable={isAvailable} className='mt-4' />
           <SocialLinks />

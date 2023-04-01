@@ -1,11 +1,4 @@
-import {
-  Github,
-  Instagram,
-  Linkedin,
-  Mail,
-  Scroll,
-  Twitter
-} from 'lucide-react'
+import { FaFacebookSquare, FaTwitterSquare, FaGithub, FaLinkedin, FaInstagram, FaMastodon } from 'react-icons/fa'
 
 export const generalLinks = [
   {
@@ -29,38 +22,38 @@ export const generalLinks = [
 export const linksSocial = [
   {
     href: 'https://twitter.com/educlopez93',
-    icon: Twitter,
+    icon: FaFacebookSquare,
+    label: 'Seguir en Facebook',
+    outline: true
+  },
+  {
+    href: 'https://twitter.com/educlopez93',
+    icon: FaTwitterSquare,
     label: 'Seguir en Twitter',
     outline: true
   },
   {
     href: 'https://instagram.com/edui_design/',
-    icon: Instagram,
+    icon: FaInstagram,
     label: 'Seguir en Instagram',
     outline: true
   },
   {
     href: 'https://github.com/educlopez',
-    icon: Github,
+    icon: FaGithub,
     label: 'Seguir en GitHub',
     outline: true
   },
   {
     href: 'https://linkedin.com/in/educlopez',
-    icon: Linkedin,
+    icon: FaLinkedin,
     label: 'Seguir en LinkedIn',
     outline: true
   },
   {
     href: 'https://read.cv/educlopez',
-    icon: Scroll,
-    label: 'Read.cv',
-    outline: true
-  },
-  {
-    href: 'mailto:educalvolopez@gmail.com',
-    icon: Mail,
-    label: 'Enviar Correo',
+    icon: FaMastodon,
+    label: 'Seguir en Mastodont',
     outline: true
   }
 ]

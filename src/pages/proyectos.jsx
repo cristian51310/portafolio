@@ -10,7 +10,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import Clients from '@/components/Clients'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { GitHubIcon } from '@/components/SocialIcons'
+import { FaGithub } from 'react-icons/fa'
 
 export default function Projects ({ pinnedRepos }) {
   const sideprojects = pinnedRepos.map((repo, index) => {
@@ -108,7 +108,7 @@ export default function Projects ({ pinnedRepos }) {
                   target='_blank'
                   rel='noopener noreferrer'
                 >
-                  <GitHubIcon className='w-4 h-4 transition fill-zinc-600 dark:fill-zinc-400 group-active:fill-zinc-900 group-hover:fill-zinc-900 dark:group-hover:fill-zinc-100 dark:group-active:fill-zinc-50' />
+                  <FaGithub className='w-4 h-4 transition fill-zinc-600 dark:fill-zinc-400 group-active:fill-zinc-900 group-hover:fill-zinc-900 dark:group-hover:fill-zinc-100 dark:group-active:fill-zinc-50' />
                   <span className='ml-2'>Github</span>
                 </Button>
                 <Button
@@ -132,10 +132,7 @@ export default function Projects ({ pinnedRepos }) {
         >
           Proyectos
         </motion.h2>
-        <ul
-          role='list'
-          className='grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3'
-        >
+        <ul className='grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3'>
           {projects.map((project) => (
             <Card as='li' key={project.name}>
               <div className='relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'>

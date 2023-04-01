@@ -33,7 +33,6 @@ export default function ThemeToggle () {
             <Menu.Item onClick={() => setTheme('light')}>
               {({ active }) => (
                 <a
-                  href='#'
                   className={classNames(
                     active
                       ? ' text-zinc-900 dark:text-white'
@@ -43,7 +42,6 @@ export default function ThemeToggle () {
                 >
                   <Sun
                     className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500'
-                    aria-hidden='true'
                   />
                   Day
                 </a>
@@ -52,7 +50,6 @@ export default function ThemeToggle () {
             <Menu.Item onClick={() => setTheme('dark')}>
               {({ active }) => (
                 <a
-                  href='#'
                   className={classNames(
                     active
                       ? ' text-zinc-900 dark:text-white'
@@ -62,7 +59,6 @@ export default function ThemeToggle () {
                 >
                   <Moon
                     className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500'
-                    aria-hidden='true'
                   />
                   Night
                 </a>
