@@ -47,7 +47,7 @@ export default function Resume () {
       </ol>
       <div className='flex gap-4'>
         <Button
-          href='2023_eduardo_calvo_lopez_curriculum.pdf'
+          href='cv_cristian_ruben_figueroa_espinoza.pdf'
           variant='solid'
           className='w-full mt-6 group'
           target='_blank'

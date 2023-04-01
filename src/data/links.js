@@ -1,4 +1,4 @@
-import { FaFacebookSquare, FaTwitterSquare, FaGithub, FaLinkedin, FaInstagram, FaMastodon } from 'react-icons/fa'
+import { FaFacebookSquare, FaTwitterSquare, FaGithub, FaLinkedin, FaInstagramSquare, FaMastodon } from 'react-icons/fa'
 
 export const generalLinks = [
   {
@@ -42,11 +42,11 @@ export const linksSocial = [
   },
   {
     href: 'https://instagram.com/edui_design/',
-    icon: FaInstagram,
+    icon: FaInstagramSquare,
     label: 'Seguir en Instagram',
-    hover: 'hover:text-pink-500',
-    dark_hover: 'dark:hover:text-pink-500',
-    hover_group: 'group-hover:text-pink-500'
+    hover: 'hover:text-pink-600',
+    dark_hover: 'dark:hover:text-pink-600',
+    hover_group: 'group-hover:text-pink-600'
   },
   {
     href: 'https://github.com/educlopez',

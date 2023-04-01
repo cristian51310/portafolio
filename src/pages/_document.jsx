@@ -4,7 +4,7 @@ export default function Document () {
   return (
     <Html className='h-full antialiased' lang='es'>
       <Head />
-      <body className='flex flex-col h-full antialiased bg-white bg-top bg-no-repeat bg-lights-sun dark:bg-zinc-900'>
+      <body className='flex flex-col h-full antialiased bg-gray-300 bg-top bg-no-repeat bg-lights-sun dark:bg-gray-950'>
         <Main />
         <NextScript />
       </body>

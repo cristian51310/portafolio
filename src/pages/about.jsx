@@ -11,12 +11,9 @@ export default function About () {
   return (
     <>
       <Head>
-        <title>About - Cristian Ruben</title>
-        <meta
-          name='description'
-          content='Soy Edu Calvo, vivo en Madrid en donde diseño y creo webs.'
-        />
+        <title>Sobre Mi - Cristian Ruben</title>
       </Head>
+
       <Container className='mt-16 sm:mt-24 mb-10'>
         <div className='grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12'>
           <motion.div
@@ -40,20 +37,23 @@ export default function About () {
               className='text-base space-y-1 text-zinc-600 dark:text-zinc-400'
               variants={FADE_DOWN_ANIMATION_VARIANTS}
             >
-              <p>
-                Soy diseñador web y frontend
-              </p>
-              <p>
-                Me encanta lo que hago porque me permite utilizar mi creatividad
-                y mis habilidades en la comunicación visual, así como en la
-                resolución de problemas.
-              </p>
-              <p>
-                Tengo un gran conocimiento de lo que se necesita para crear
-                grandes interfaces de usuario y diseños que funcionen bien en
-                cualquier dispositivo, desde ordenadores de sobremesa hasta
-                teléfonos móviles.
-              </p>
+              <div className='pt-9'>
+                <p>
+                  Soy diseñador web y frontend
+                </p>
+                <p>
+                  Me encanta lo que hago porque me permite utilizar mi creatividad
+                  y mis habilidades en la comunicación visual, así como en la
+                  resolución de problemas.
+                </p>
+                <p>
+                  Tengo un gran conocimiento de lo que se necesita para crear
+                  grandes interfaces de usuario y diseños que funcionen bien en
+                  cualquier dispositivo, desde ordenadores de sobremesa hasta
+                  teléfonos móviles.
+                </p>
+              </div>
+
             </motion.div>
           </div>
           <SocialText />

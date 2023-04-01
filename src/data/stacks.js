@@ -21,16 +21,6 @@ export const stacksType = [
   },
   {
     id: '3',
-    name: 'design',
-    online: true
-  },
-  {
-    id: '4',
-    name: 'gamer',
-    online: true
-  },
-  {
-    id: '5',
     name: 'productivity',
     online: true
   }
@@ -39,7 +29,7 @@ export const stacksType = [
 export const stacks = [
   {
     type: 'workstation',
-    title: '16” MacBook Pro, M1 Max, 16GB RAM (2021)',
+    title: '13” MacBook Air, M1, 8GB RAM (2020)',
     link: 'https://amzn.to/3hp6Dxj',
     info: 'Utilizo este ordenador todos los días para programar, diseñar y para uso personal. Su diseño es bonito y funcional. La duración de la batería es excelente y me encantan los teclados retroiluminados.',
     img: imgMacbook

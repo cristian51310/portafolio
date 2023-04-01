@@ -38,7 +38,6 @@ function Article ({ article }) {
 }
 
 export default function Home ({ articles }) {
-  const isAvailable = true
   return (
     <>
       <Head>
@@ -57,9 +56,8 @@ export default function Home ({ articles }) {
               Cristian Ruben
             </span>
             <p>Soy diseñador web, frontend y movil.</p>
-            <p>Trabajo actualmente como Freelance.</p>
           </Balancer>
-          <StatusWork isAvailable={isAvailable} className='mt-4' />
+          <StatusWork className='mt-4' />
           <SocialLinks />
         </motion.div>
       </Container>

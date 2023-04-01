@@ -20,26 +20,6 @@ export default function Projects ({ pinnedRepos }) {
         descriptionEs =
           'Sitio web en NextJS y Tailwind, uso de la API de TMDB para mostrar diferentes colecciones de películas y series. El proyecto todavía está en desarrollo'
         break
-      case 1:
-        descriptionEs =
-          'Portafolio hecho con NextJS, Tailwindcss, MDX y varios experimentos'
-        break
-      case 2:
-        descriptionEs =
-          'Proyecto realizado con remix.run y usando Suppabase para crear un chat. Para los estilos, se está utilizando Tailwindcss.'
-        break
-      case 3:
-        descriptionEs =
-          'Gamedev es un proyecto donde agregaré minijuegos a medida que aprenda React, Nextjs, y posiblemente migraré de JavaScript a TypeScript. Todos los comentarios y consejos para mejorar el código son bienvenidos.'
-        break
-      case 4:
-        descriptionEs =
-          'Generador de recetas con co:here, pasando ciertos parametros el prompt se completa y devuelve una receta con los ingredientes y pasos a seguir'
-        break
-      case 5:
-        descriptionEs =
-          '¡Descubre su guardarropa como nunca antes con Wardrobeme! Sube una imagen de tu ropa y deja que la api de cloudinary detecte elementos y colores individuales en la imagen.'
-        break
       default:
         break
     }
@@ -56,11 +36,7 @@ export default function Projects ({ pinnedRepos }) {
   return (
     <>
       <Head>
-        <title>Proyectos - Edu Calvo</title>
-        <meta
-          name='description'
-          content='Proyectos que he realizado durante mi carrera.'
-        />
+        <title>Proyectos - Cristian Ruben</title>
       </Head>
       <SimpleLayout
         title='Proyectos que he realizado durante mi carrera.'

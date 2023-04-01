@@ -47,7 +47,6 @@ function Toollist ({ title, href, children, pills }) {
       <Card.Title
         as='div'
         href={href}
-        rel='noopener noreferrer'
         target='_blank'
       >
         {title}{' '}
@@ -113,11 +112,7 @@ export default function Uses () {
   return (
     <>
       <Head>
-        <title>Recomendaciones - Edu Calvo</title>
-        <meta
-          name='description'
-          content='El software que uso, los dispositivos que amo y otras cosas que recomiendo.'
-        />
+        <title>Recomendaciones - Cristian Ruben</title>
       </Head>
       <SimpleLayout
         title='El software que uso, los dispositivos que amo y otras cosas que recomiendo.'
