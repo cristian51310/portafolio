@@ -32,16 +32,11 @@ export default function Resume () {
                 {role.title}
               </dd>
               <dt className='sr-only'>Date</dt>
-              <dd
-                className='ml-auto text-xs text-zinc-600 dark:text-zinc-300'
-                aria-label={`${role.start.label ?? role.start} until ${
-                  role.end.label ?? role.end
-                }`}
-              >
+              <dd className='ml-auto text-xs text-zinc-600 dark:text-zinc-300'>
                 <time dateTime={role.start.dateTime ?? role.start}>
                   {role.start.label ?? role.start}
                 </time>{' '}
-                <span aria-hidden='true'>—</span>{' '}
+                <span>—</span>
                 <time dateTime={role.end.dateTime ?? role.end}>
                   {role.end.label ?? role.end}
                 </time>

@@ -1,10 +1,10 @@
+/* eslint-disable array-callback-return */
 import { Fragment, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { generalLinks } from '@/data/links'
 import avatarImage from '@/images/avatar.jpg'
-import avatarImageHover from '@/images/avatarhover.jpg'
 import { Popover, Transition } from '@headlessui/react'
 import clsx from 'clsx'
 import { AnimatePresence, motion } from 'framer-motion'
@@ -79,9 +79,6 @@ function MobileNavigation (props) {
                         key={index}
                         href={link.href}
                         target={link.target}
-                        rel={
-                          link.target === '_blank' ? 'noopener noreferrer' : ''
-                        }
                       >
                         {link.label}
                       </MobileNavItem>
@@ -178,7 +175,7 @@ function AvatarContainer ({ className, ...props }) {
     <div
       className={clsx(
         className,
-        'h-10 w-10 rounded-full bg-white/90 p-0.5 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
+        'h-10 w-10 rounded-full bg-white p-1 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
       )}
       {...props}
     />
@@ -186,19 +183,15 @@ function AvatarContainer ({ className, ...props }) {
 }
 
 function Avatar ({ large = false, className, index, ...props }) {
-  const [hoveredIndex, setHoveredIndex] = useState(null)
   return (
     <Link
       href='/'
-      aria-label='Home'
       className={clsx(className, 'pointer-events-auto')}
-      onMouseEnter={() => setHoveredIndex(index)}
-      onMouseLeave={() => setHoveredIndex(null)}
       {...props}
     >
       <Image
-        src={hoveredIndex === index ? avatarImageHover : avatarImage}
-        alt='avatar Eduardo Calvo López'
+        src={avatarImage}
+        alt='avatar Cristian Ruben Figueroa Espinoza'
         placeholder='blur'
         sizes={large ? '4rem' : '2.25rem'}
         className={clsx(

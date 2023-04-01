@@ -43,11 +43,8 @@ export default function Home ({ articles }) {
     <>
       <Head>
         <title>Cristian Ruben - Diseñador Web & Frontend</title>
-        <meta
-          name='description'
-          content=' Soy Eduardo, soy diseñador web y Frontend con sede en Madrid.'
-        />
       </Head>
+
       <Container className='mt-9'>
         <motion.div
           className='max-w-xl'
@@ -66,7 +63,7 @@ export default function Home ({ articles }) {
           <SocialLinks />
         </motion.div>
       </Container>
-      <Container className='mt-20'>
+      <Container className='mt-20 mb-14'>
         <motion.div
           className='grid max-w-xl grid-cols-1 mx-auto gap-y-20 lg:max-w-none lg:grid-cols-2'
           variants={FADE_DOWN_ANIMATION_VARIANTS}
