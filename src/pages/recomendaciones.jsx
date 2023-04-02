@@ -8,7 +8,6 @@ import { motion } from 'framer-motion'
 
 import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/constants'
 import { Card } from '@/components/Card'
-import { Pill } from '@/components/Pill'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
@@ -43,7 +42,7 @@ function ToolsSectionGrid ({ children, title }) {
   )
 }
 
-function Toollist ({ title, href, children, pills }) {
+function Toollist ({ title, href, children }) {
   return (
     <Card as='li' className='relative z-10'>
       <Card.Title
@@ -51,14 +50,7 @@ function Toollist ({ title, href, children, pills }) {
         href={href}
         target='_blank'
       >
-        {title}{' '}
-        {pills && (
-          <div className='inline-flex flex-wrap gap-2 ml-1'>
-            {pills.map((pill) => (
-              <Pill key={pill.name} variant={pill.name} />
-            ))}
-          </div>
-        )}
+        {title}
       </Card.Title>
       <Card.Description>{children}</Card.Description>
     </Card>
@@ -85,13 +77,6 @@ function Toolgrid ({ title, href, img, children, pills }) {
         <p className='block my-2 text-sm font-medium text-center truncate pointer-events-none text-zinc-900 dark:text-white'>
           {children}
         </p>
-        {pills && (
-          <div className='absolute inline-flex items-center justify-between gap-2 inset-x-1 top-1 '>
-            {pills.map((pill) => (
-              <Pill key={pill.name} variant={pill.name} />
-            ))}
-          </div>
-        )}
       </div>
     </li>
   )
@@ -171,7 +156,6 @@ export default function Uses () {
                     title={stack.title}
                     href={stack.link}
                     key={stack.title}
-                    pills={stack.pills}
                   >
                     {stack.info}
                   </Toollist>
@@ -183,7 +167,6 @@ export default function Uses () {
                     title={stack.title}
                     href={stack.link}
                     key={stack.title}
-                    pills={stack.pills}
                   >
                     {stack.info}
                   </Toollist>
@@ -195,7 +178,6 @@ export default function Uses () {
                     title={stack.title}
                     href={stack.link}
                     key={stack.title}
-                    pills={stack.pills}
                   >
                     {stack.info}
                   </Toollist>
@@ -212,7 +194,6 @@ export default function Uses () {
                     href={stack.link}
                     key={stack.title}
                     img={stack.img}
-                    pills={stack.pills}
                   >
                     {stack.title}
                   </Toolgrid>
@@ -225,7 +206,6 @@ export default function Uses () {
                     href={stack.link}
                     key={stack.title}
                     img={stack.img}
-                    pills={stack.pills}
                   >
                     {stack.title}
                   </Toolgrid>
@@ -238,7 +218,6 @@ export default function Uses () {
                     href={stack.link}
                     key={stack.title}
                     img={stack.img}
-                    pills={stack.pills}
                   >
                     {stack.title}
                   </Toolgrid>
