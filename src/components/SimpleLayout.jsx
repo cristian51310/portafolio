@@ -6,7 +6,7 @@ import { Container } from '@/components/Container'
 
 export function SimpleLayout ({ title, intro, children }) {
   return (
-    <Container className='mt-16 sm:mt-20'>
+    <Container className='mt-12 sm:mt-14'>
       <header className='max-w-full'>
         <motion.h1
           className='text-4xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-5xl'

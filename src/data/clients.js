@@ -1,5 +1,6 @@
 import bancosabadellLogo from '@/images/logos/color/bancosabadell-logo.svg'
 import bancosabadellWhiteLogo from '@/images/logos/white/bancosabadell-logo.svg'
+
 export const clients = [
   {
     name: 'Banco Sabadell',

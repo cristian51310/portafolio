@@ -2,7 +2,6 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { generalLinks } from '@/data/links'
 import { AnimatePresence, motion } from 'framer-motion'
-
 import { FADE_IN_ANIMATION_CARD } from '@/lib/constants'
 import { Container } from '@/components/Container'
 
@@ -46,11 +45,11 @@ export function Footer () {
                           initial={{ opacity: 0 }}
                           animate={{
                             opacity: 1,
-                            transition: { duration: 0.15 }
+                            transition: { duration: 0.4 }
                           }}
                           exit={{
                             opacity: 0,
-                            transition: { duration: 0.15, delay: 0.2 }
+                            transition: { duration: 0.15, delay: 0.5 }
                           }}
                         />
                       )}

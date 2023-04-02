@@ -26,15 +26,11 @@ function Article ({ article }) {
           {article.description}
           <br />
           {article.tags.map((tag) => (
-            <a
-              href='#'
-              key={tag}
-              className="inline-block text-zinc-600  before:content-['#'] dark:text-zinc-400 "
-            >
-              <span className='inline-flex items-center mt-2 mr-2 text-xs font-medium text-zinc-600 dark:text-zinc-400'>
+            <p key={tag} className="inline-block text-zinc-600 before:content-['#'] dark:text-zinc-400 ">
+              <span className='inline-flex items-center mt-3 mr-4 text-xs font-medium text-zinc-600 dark:text-zinc-400'>
                 {tag}
               </span>
-            </a>
+            </p>
           ))}
         </Card.Description>
         <Card.Cta>Leer artículo</Card.Cta>
@@ -69,19 +65,18 @@ export default function ArticlesIndex ({ articles }) {
         intro={`Cuando no estoy programando, puedes encontrarme escribiendo sobre diseño de interfaces, programación y hobbies, actualmente he escrito ${articles.length} artículos.`}
       >
         <motion.div
-          className='md:border-l md:border-zinc-900/10 md:pl-6 md:dark:border-white/10'
+          className='md:border-l md:border-zinc-900/10 md:pl-10 md:dark:border-white/10'
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          <div className='flex flex-col max-w-3xl space-y-16 mb-20'>
+          <div className='flex flex-col max-w-3xl space-y-12 mb-20'>
             <div className='relative w-full mb-4'>
               <input
-                aria-label='Buscar artículos por título o tema'
                 type='text'
                 onChange={(e) => setSearchValue(e.target.value)}
                 placeholder='Buscar artículos por título o tema'
                 className='block w-full px-4 py-2 border rounded-full border-zinc-900/10 bg-white/10 text-zinc-600 backdrop-blur-sm placeholder:text-zinc-600 hover:text-zinc-900 dark:border-white/10 dark:bg-zinc-900/20 dark:text-zinc-400 dark:backdrop-blur placeholder:dark:text-zinc-300 dark:hover:text-white'
               />
-              <Search className='absolute w-5 h-5 right-3 top-3 text-zinc-900 dark:text-zinc-300' />
+              <Search className='absolute w-5 h-5 right-6 top-2.5 text-zinc-900 dark:text-zinc-300' />
             </div>
 
             <Suspense fallback={null}>

@@ -12,6 +12,8 @@ import { Pill } from '@/components/Pill'
 import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 
+import { HiBars3, HiOutlineSquares2X2 } from 'react-icons/hi2'
+
 function filterStacks (stacks, type) {
   return stacks.filter((stack) => stack.type === type)
 }
@@ -69,7 +71,6 @@ function Toolgrid ({ title, href, img, children, pills }) {
         <Image
           src={img}
           alt={title}
-          placeholder='blur'
           width={70}
           height={70}
           className='object-cover mx-auto transition-transform duration-700 pointer-events-none group-hover:opacity-75 group-hover:scale-105'
@@ -78,11 +79,9 @@ function Toolgrid ({ title, href, img, children, pills }) {
           href={href}
           type='button'
           className='absolute inset-0 focus:outline-none'
-          rel='noopener noreferrer'
           target='_blank'
-        >
-          <span className='sr-only'>Ver {title}</span>
-        </Link>
+          rel='noreferrer'
+        />
         <p className='block my-2 text-sm font-medium text-center truncate pointer-events-none text-zinc-900 dark:text-white'>
           {children}
         </p>
@@ -114,9 +113,10 @@ export default function Uses () {
       <Head>
         <title>Recomendaciones - Cristian Ruben</title>
       </Head>
+
       <SimpleLayout
         title='El software que uso, los dispositivos que amo y otras cosas que recomiendo.'
-        intro='Las cosas que uso para crear webs, mantenerme productivo o comprar para engañarme y pensar que estoy siendo productivo cuando en realidad solo estoy procrastinando'
+        intro='Las cosas que uso para desarrollar, mantenerme productivo y pensar que estoy siendo productivo cuando en realidad solo estoy procrastinando'
       >
         <motion.div
           className='relative z-20 flex items-center justify-start gap-4 px-4 py-2 my-16 border dark:backdrop-blurbackdrop-blur w-fit rounded-3xl border-zinc-900/10 bg-white/10 backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/20'
@@ -141,52 +141,23 @@ export default function Uses () {
                 'pointer-events-none relative inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out'
               )}
             >
-              <span
-                className={classNames(
+              <span className='absolute inset-0 text-gray-700 flex h-full w-full items-center justify-center transition-opacity'>
+                <HiBars3 className={classNames(
                   enabled
                     ? 'opacity-0 duration-100 ease-out'
                     : 'opacity-100 duration-200 ease-in',
-                  'absolute inset-0 flex h-full w-full items-center justify-center transition-opacity'
+                  'w-3'
                 )}
-                aria-hidden='true'
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='w-3 h-3 text-gray-400 dark:text-zinc-700'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z'
-                  />
-                </svg>
+                />
               </span>
-              <span
-                className={classNames(
+              <span className='absolute text-orange-400 inset-0 flex h-full w-full items-center justify-center transition-opacity'>
+                <HiOutlineSquares2X2 className={classNames(
                   enabled
                     ? 'opacity-100 duration-200 ease-in'
                     : 'opacity-0 duration-100 ease-out',
-                  'absolute inset-0 flex h-full w-full items-center justify-center transition-opacity'
+                  'w-3'
                 )}
-              >
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  strokeWidth={1.5}
-                  stroke='currentColor'
-                  className='w-3 h-3 text-amber-600'
-                >
-                  <path
-                    strokeLinecap='round'
-                    strokeLinejoin='round'
-                    d='M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z'
-                  />
-                </svg>
+                />
               </span>
             </span>
           </Switch>

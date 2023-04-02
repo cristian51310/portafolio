@@ -3,10 +3,6 @@ import { Menu, Transition } from '@headlessui/react'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'next-themes'
 
-function classNames (...classes) {
-  return classes.filter(Boolean).join(' ')
-}
-
 export default function ThemeToggle () {
   const { setTheme } = useTheme()
   return (
@@ -15,7 +11,6 @@ export default function ThemeToggle () {
         <Menu.Button className='inline-flex px-3 py-3 transition border rounded-full md:px-2 md:py-2 group border-zinc-900/10 bg-white/10 text-zinc-600 backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/20 dark:text-zinc-400 dark:backdrop-blur'>
           <Sun className='w-4 h-4 stroke-zinc-900 dark:hidden' />
           <Moon className='hidden w-4 h-4 stroke-white dark:block' />
-          <span className='sr-only'>Toggle theme</span>
         </Menu.Button>
       </div>
 
@@ -31,38 +26,16 @@ export default function ThemeToggle () {
         <Menu.Items className='absolute right-0 z-10 w-auto mt-2 origin-top-right border divide-y divide-gray-100 rounded-md shadow-lg border-zinc-900/10 bg-white/10 text-zinc-600 ring-1 backdrop-blur-sm dark:border-white/10 dark:bg-zinc-900/20 dark:text-zinc-400 dark:backdrop-blur ring-black ring-opacity-5 focus:outline-none'>
           <div className='py-1'>
             <Menu.Item onClick={() => setTheme('light')}>
-              {({ active }) => (
-                <a
-                  className={classNames(
-                    active
-                      ? ' text-zinc-900 dark:text-white'
-                      : 'text-zinc-700 dark:text-zinc-300',
-                    'group flex items-center px-4 py-2 text-sm '
-                  )}
-                >
-                  <Sun
-                    className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500'
-                  />
-                  Day
-                </a>
-              )}
+              <a className='group flex items-center px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300'>
+                <Sun className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500' />
+                Dia
+              </a>
             </Menu.Item>
             <Menu.Item onClick={() => setTheme('dark')}>
-              {({ active }) => (
-                <a
-                  className={classNames(
-                    active
-                      ? ' text-zinc-900 dark:text-white'
-                      : 'text-zinc-700 dark:text-zinc-300',
-                    'group flex items-center px-4 py-2 text-sm'
-                  )}
-                >
-                  <Moon
-                    className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500'
-                  />
-                  Night
-                </a>
-              )}
+              <a className='group flex items-center px-4 py-2 text-sm text-zinc-700 dark:text-zinc-300'>
+                <Moon className='w-5 h-5 mr-3 text-zinc-700 dark:text-zinc-400 group-hover:text-amber-600 dark:group-hover:text-amber-500' />
+                Noche
+              </a>
             </Menu.Item>
           </div>
         </Menu.Items>

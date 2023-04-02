@@ -4,9 +4,7 @@ export function Section ({ title, children }) {
   const id = useId()
 
   return (
-    <section
-      className='md:border-l md:border-zinc-900/10 md:pl-6 md:dark:border-white/10'
-    >
+    <section className='md:border-l md:border-zinc-900/10 md:pl-6 md:dark:border-white/10'>
       <div className='grid items-baseline max-w-3xl grid-cols-1 gap-y-8 md:grid-cols-4'>
         <h2
           id={id}

@@ -1,11 +1,11 @@
-import logoTantra from '@/images/logos/circle/tantra.svg'
+import logoDgeti from '@/images/logos/cbtis.jpeg'
 
 export const resume = [
   {
-    company: 'Company Name',
-    title: 'Diseñador Gráfico y Maquetador web',
-    logo: logoTantra,
-    start: '2022',
-    end: '2023'
+    company: 'CBTIS 171',
+    title: 'Tecnico en programacion',
+    logo: logoDgeti,
+    start: '2019',
+    end: '2021'
   }
 ]

@@ -1,10 +1,7 @@
 import { forwardRef } from 'react'
 import clsx from 'clsx'
 
-const OuterContainer = forwardRef(function OuterContainer (
-  { className, children, ...props },
-  ref
-) {
+const OuterContainer = forwardRef(function OuterContainer ({ className, children, ...props }, ref) {
   return (
     <div ref={ref} className={clsx('sm:px-8', className)} {...props}>
       <div className='mx-auto max-w-7xl lg:px-8'>{children}</div>
@@ -12,10 +9,7 @@ const OuterContainer = forwardRef(function OuterContainer (
   )
 })
 
-const InnerContainer = forwardRef(function InnerContainer (
-  { className, children, ...props },
-  ref
-) {
+const InnerContainer = forwardRef(function InnerContainer ({ className, children, ...props }, ref) {
   return (
     <div
       ref={ref}

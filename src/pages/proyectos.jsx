@@ -18,10 +18,6 @@ export default function Projects ({ pinnedRepos }) {
     switch (index % 6) {
       case 0:
         descriptionEs =
-          'Sitio web en NextJS y Tailwind, uso de la API de TMDB para mostrar diferentes colecciones de películas y series. El proyecto todavía está en desarrollo'
-        break
-      case 1:
-        descriptionEs =
           'Mi portafolio personal, en el muestro mi trayectoria, algunos poryectos y cositas interesantes, desarrollado en Next.js'
         break
       default:
@@ -135,12 +131,11 @@ export default function Projects ({ pinnedRepos }) {
               <Card.Description>{project.description}</Card.Description>
               <div className='flex gap-4 '>
                 <Button
-                  className='z-40 flex items-center w-full mt-6 group'
+                  className='z-40 flex items-center w-full mt-6'
                   href={project.link.href}
-                  variant='solid'
                   target='_blank'
                 >
-                  <Link2 className='w-4 h-4 transition stroke-zinc-600 dark:stroke-zinc-400 group-active:stroke-zinc-900 group-hover:stroke-zinc-900 dark:group-hover:stroke-zinc-100 dark:group-active:stroke-zinc-50' />
+                  <Link2 className='w-4 h-4' />
                   <span className='ml-2'>{project.link.label}</span>
                 </Button>
               </div>

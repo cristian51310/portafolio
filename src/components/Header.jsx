@@ -63,7 +63,7 @@ function MobileNavigation (props) {
             className='fixed z-50 p-8 origin-top bg-white inset-x-4 top-8 rounded-3xl ring-1 ring-zinc-900/5 dark:bg-zinc-900 dark:ring-zinc-800'
           >
             <div className='flex flex-row-reverse items-center justify-between'>
-              <Popover.Button aria-label='Close menu' className='p-1 -m-1'>
+              <Popover.Button className='p-1 -m-1'>
                 <X className='w-6 h-6 text-zinc-500 dark:text-zinc-400' />
               </Popover.Button>
               <h2 className='text-sm font-medium text-zinc-600 dark:text-zinc-400'>
@@ -170,18 +170,6 @@ function clamp (number, a, b) {
   return Math.min(Math.max(number, min), max)
 }
 
-function AvatarContainer ({ className, ...props }) {
-  return (
-    <div
-      className={clsx(
-        className,
-        'h-10 w-10 rounded-full bg-white p-1 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:ring-white/10'
-      )}
-      {...props}
-    />
-  )
-}
-
 function Avatar ({ large = false, className, index, ...props }) {
   return (
     <Link
@@ -192,8 +180,7 @@ function Avatar ({ large = false, className, index, ...props }) {
       <Image
         src={avatarImage}
         alt='avatar Cristian Ruben Figueroa Espinoza'
-        placeholder='blur'
-        sizes={large ? '4rem' : '2.25rem'}
+        sizes={large ? '4rem' : '2.2rem'}
         className={clsx(
           'rounded-full bg-zinc-100 object-cover dark:bg-zinc-800',
           large ? 'h-16 w-16' : 'h-9 w-9'
@@ -220,10 +207,6 @@ export function Header () {
       document.documentElement.style.setProperty(property, value)
     }
 
-    function removeProperty (property) {
-      document.documentElement.style.removeProperty(property)
-    }
-
     function updateHeaderStyles () {
       const { top, height } = headerRef.current.getBoundingClientRect()
       const scrollY = clamp(
@@ -248,16 +231,6 @@ export function Header () {
       } else if (top === 0) {
         setProperty('--header-height', `${scrollY + height}px`)
         setProperty('--header-mb', `${-scrollY}px`)
-      }
-
-      if (top === 0 && scrollY > 0 && scrollY >= downDelay) {
-        setProperty('--header-inner-position', 'fixed')
-        removeProperty('--header-top')
-        removeProperty('--avatar-top')
-      } else {
-        removeProperty('--header-inner-position')
-        setProperty('--header-top', '0px')
-        setProperty('--avatar-top', '0px')
       }
     }
 
@@ -333,13 +306,6 @@ export function Header () {
                 style={{ position: 'var(--header-inner-position)' }}
               >
                 <div className='relative'>
-                  <AvatarContainer
-                    className='absolute left-0 transition-opacity origin-left top-3'
-                    style={{
-                      opacity: 'var(--avatar-border-opacity, 0)',
-                      transform: 'var(--avatar-border-transform)'
-                    }}
-                  />
                   <div className='inline-flex items-center'>
                     <Avatar
                       large
@@ -364,9 +330,7 @@ export function Header () {
             <div className='relative flex gap-4'>
               <div className='flex flex-1'>
                 {!isHomePage && (
-                  <AvatarContainer>
-                    <Avatar />
-                  </AvatarContainer>
+                  <Avatar />
                 )}
               </div>
               <div className='flex justify-end flex-1 md:justify-center'>

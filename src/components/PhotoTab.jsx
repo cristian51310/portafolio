@@ -81,7 +81,6 @@ export function Phototab () {
               src={tab.image}
               alt={tab.name}
               sizes='(min-width: 1024px) 32rem, 20rem'
-              placeholder='blur'
               className='object-cover aspect-square rounded-2xl '
             />
           </Tab.Panel>

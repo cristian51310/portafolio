@@ -59,7 +59,6 @@ Card.Description = function CardDescription ({ children }) {
 Card.Cta = function CardCta ({ children }) {
   return (
     <div
-      aria-hidden='true'
       className='relative z-10 flex items-center mt-4 text-sm font-medium text-amber-600 dark:text-amber-500'
     >
       {children}
@@ -85,10 +84,7 @@ Card.Eyebrow = function CardEyebrow ({
       {...props}
     >
       {decorate && (
-        <span
-          className='absolute inset-y-0 left-0 flex items-center'
-          aria-hidden='true'
-        >
+        <span className='absolute inset-y-0 left-0 flex items-center'>
           <span className='h-4 w-0.5 rounded-full bg-zinc-900 dark:bg-white' />
         </span>
       )}

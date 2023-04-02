@@ -22,10 +22,7 @@ function Article ({ article }) {
         {article.description}
         <br />
         {article.tags.map((tag) => (
-          <a
-            key={tag}
-            className="inline-block text-zinc-600 before:content-['#'] dark:text-zinc-400"
-          >
+          <a key={tag} className="inline-block text-zinc-600 before:content-['#'] dark:text-zinc-400">
             <span className='inline-flex items-center mt-2 mr-2 text-xs font-medium text-zinc-600 dark:text-zinc-400'>
               {tag}
             </span>

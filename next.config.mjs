@@ -9,15 +9,15 @@ const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
   experimental: {
-    scrollRestoration: true,
+    scrollRestoration: true
   },
-  async redirects() {
+  async redirects () {
     return [
       {
         source: '/articles/:slug*',
         destination: '/blog/:slug*', // Matched parameters can be used in the destination
-        permanent: true,
-      },
+        permanent: true
+      }
     ]
   }
 }
@@ -32,31 +32,29 @@ const withMDX = nextMDX({
         rehypePrettyCode,
         {
           theme: 'one-dark-pro',
-          onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty
-            // lines to be copy/pasted
+          onVisitLine (node) {
             if (node.children.length === 0) {
               node.children = [{ type: 'text', value: ' ' }]
             }
           },
-          onVisitHighlightedLine(node) {
+          onVisitHighlightedLine (node) {
             node.properties.className.push('line--highlighted')
           },
-          onVisitHighlightedWord(node) {
+          onVisitHighlightedWord (node) {
             node.properties.className = ['word--highlighted']
-          },
-        },
+          }
+        }
       ],
       [
         rehypeAutolinkHeadings,
         {
           properties: {
-            className: ['anchor'],
-          },
-        },
-      ],
-    ],
-  },
+            className: ['anchor']
+          }
+        }
+      ]
+    ]
+  }
 })
 
 export default withMDX(nextConfig)

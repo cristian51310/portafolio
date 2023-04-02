@@ -11,7 +11,7 @@ import { FADE_IN_ANIMATION_CARD } from '@/lib/constants'
 export default function Clients () {
   const [mounted, setMounted] = useState(false)
   const { theme } = useTheme()
-  // useEffect only runs on the client, so now we can safely show the UI
+
   useEffect(() => {
     setMounted(true)
   }, [])
