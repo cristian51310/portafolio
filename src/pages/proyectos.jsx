@@ -20,6 +20,10 @@ export default function Projects ({ pinnedRepos }) {
         descriptionEs =
           'Sitio web en NextJS y Tailwind, uso de la API de TMDB para mostrar diferentes colecciones de películas y series. El proyecto todavía está en desarrollo'
         break
+      case 1:
+        descriptionEs =
+          'Mi portafolio personal, en el muestro mi trayectoria, algunos poryectos y cositas interesantes, desarrollado en Next.js'
+        break
       default:
         break
     }
