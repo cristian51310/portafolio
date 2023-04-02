@@ -1,5 +1,4 @@
 import nextMDX from '@next/mdx'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypePrettyCode from 'rehype-pretty-code'
 import rehypeSlug from 'rehype-slug'
 import remarkGfm from 'remark-gfm'
@@ -8,9 +7,6 @@ import remarkGfm from 'remark-gfm'
 const nextConfig = {
   pageExtensions: ['jsx', 'mdx'],
   reactStrictMode: true,
-  experimental: {
-    scrollRestoration: true
-  },
   async redirects () {
     return [
       {
@@ -42,14 +38,6 @@ const withMDX = nextMDX({
           },
           onVisitHighlightedWord (node) {
             node.properties.className = ['word--highlighted']
-          }
-        }
-      ],
-      [
-        rehypeAutolinkHeadings,
-        {
-          properties: {
-            className: ['anchor']
           }
         }
       ]
