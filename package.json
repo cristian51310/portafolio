@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@headlessui/react": "1.7.13",

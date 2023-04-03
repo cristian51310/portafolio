@@ -48,6 +48,7 @@ function Article ({ article }) {
 
 export default function ArticlesIndex ({ articles }) {
   const [searchValue, setSearchValue] = useState('')
+
   const filteredBlogPosts = articles.filter(
     (article) =>
       article.title.toLowerCase().includes(searchValue.toLowerCase()) ||
@@ -58,7 +59,7 @@ export default function ArticlesIndex ({ articles }) {
   return (
     <>
       <Head>
-        <title>Blog - Edu Calvo</title>
+        <title>Blog - Cristian Ruben</title>
       </Head>
       <SimpleLayout
         title='Escribiendo sobre diseño de interfaces, programación y hobbies.'
