@@ -8,7 +8,6 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from '@/lib/constants'
 import { getPinnedRepos } from '@/lib/github'
 import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
-import Clients from '@/components/Clients'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { FaGithub } from 'react-icons/fa'
 
@@ -46,7 +45,7 @@ export default function Projects ({ pinnedRepos }) {
           className='mb-10 text-2xl font-bold tracking-tight text-zinc-900 dark:text-white sm:text-2xl'
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
-          Side Projects
+          Github Projects
         </motion.h2>
         <ul
           role='list'
@@ -108,7 +107,7 @@ export default function Projects ({ pinnedRepos }) {
         >
           Proyectos
         </motion.h2>
-        <ul className='grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3'>
+        <ul className='grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3 mb-10'>
           {projects.map((project) => (
             <Card as='li' key={project.name}>
               <div className='relative z-10 flex items-center justify-center w-12 h-12 bg-white rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0'>
@@ -142,10 +141,6 @@ export default function Projects ({ pinnedRepos }) {
             </Card>
           ))}
         </ul>
-        <div className='mb-10'>
-          <Clients />
-        </div>
-
       </SimpleLayout>
     </>
   )
